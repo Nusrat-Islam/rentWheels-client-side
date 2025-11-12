@@ -12,7 +12,7 @@ const RootLayout = () => {
       {/* Custom Cursor সব page এ */}
       <CustomCursor/>
 
-      {/* Page background */}
+    
       <div className="min-h-screen bg-gradient-to-r from-yellow-100 via-purple-200 to-orange-100">
         {/* Page content wrapper */}
         <div className="mx-auto w-11/12">

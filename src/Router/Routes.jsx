@@ -4,6 +4,9 @@ import Home from "../Components/Home";
 import Register from "../Pages/Register";
 import Login from "../Pages/Login";
 import BrowsCar from "../Pages/BrowsCar";
+import AddCar from "../Pages/AddCar";
+import PrivateRoute from "../Router/PrivateRoute";
+import CarDetails from "../Components/CarDetails";
 
 
  export const router = createBrowserRouter([
@@ -28,6 +31,21 @@ import BrowsCar from "../Pages/BrowsCar";
        element:<BrowsCar></BrowsCar>,
        loader:()=> fetch('http://localhost:3000/rents')
         },
+        {
+        path:"/add-car",
+        element:<PrivateRoute>
+          <AddCar></AddCar>
+        </PrivateRoute>
+        },
+        {
+        path:"/car-details/:id",
+        element:(<PrivateRoute>
+         <CarDetails></CarDetails>
+        </PrivateRoute>
+        ),
+        loader: ({params}) => fetch(`http://localhost:3000/rents/${params.id}`)
+        },
+      
     ]
   },
 ]);

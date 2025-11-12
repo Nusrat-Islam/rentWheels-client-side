@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
 import { MdOutlineDoubleArrow } from 'react-icons/md';
+import { Link } from 'react-router';
 
 const RentCard = ({ singleData, index }) => {
-  const { name, location, rating, status, rentPerDay, category, imageUrl } = singleData;
+  const { name, providerName,description, providerEmail,location, rating, status, rentPerDay, category, imageUrl,_id } = singleData;
 
   return (
     <motion.div
@@ -15,7 +16,7 @@ const RentCard = ({ singleData, index }) => {
         scale: 1,
         transition: {
           duration: 0.6,
-          delay: index * 0.15, // একটার পর একটা আসবে
+          delay: index * 0.15,
           ease: [0.17, 0.55, 0.55, 1],
         },
       }}
@@ -42,12 +43,24 @@ const RentCard = ({ singleData, index }) => {
             {category}
           </p></div>
         </div>
+        <div>
+          <p className='secondary-font'>{description}</p>
+        </div>
 
         <div className="flex justify-between items-center">
           <p className="secondary-font text-xl">Location: {location}</p>
           <div className="flex items-center gap-2">
             <p className="secondary-font text-xl">{rating}</p>
             <img className="w-8 h-8" src="/src/assets/rating.png" alt="rating" />
+          </div>
+        </div>
+        
+        <div className='flex justify-between items-center'>
+          <div>
+       <h4 className='secondary-font'>Email: {providerEmail}</h4>
+          </div>
+          <div>
+       <h4 className='secondary-font'>Name: {providerName}</h4>
           </div>
         </div>
 
@@ -57,9 +70,9 @@ const RentCard = ({ singleData, index }) => {
             Starting From <span className="text-yellow-500">${rentPerDay}/</span>Day
           </button>
 
-          <button className="flex-1 thm-btn py-3 rounded-lg text-xl font-semibold hover:bg-purple-600 transition flex justify-center items-center gap-2">
+          <Link to={`/car-details/${_id}`} className="flex-1 thm-btn py-3 rounded-lg text-xl font-semibold hover:bg-purple-600 transition flex justify-center items-center gap-2">
             View Details <MdOutlineDoubleArrow className="text-xl" />
-          </button>
+          </Link>
         </div>
        <div>
         <div>
