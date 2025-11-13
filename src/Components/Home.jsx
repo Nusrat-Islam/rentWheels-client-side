@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import Banner from './Banner';
 import { useLoaderData } from 'react-router';
 import RentCard from './RentCard';
+import WhyRentUs from './WhyRentUs';
 
 const Home = () => {
   const data = useLoaderData()
@@ -59,8 +60,6 @@ const Home = () => {
 </div>
 </form>
 
-
-
             <div className='grid grid-cols-3 gap-8 pb-20'>
              {
                 cars.map(singleData => (
@@ -68,6 +67,7 @@ const Home = () => {
                 ))
              }
             </div>
+            <WhyRentUs></WhyRentUs>
           
         </div>
     );

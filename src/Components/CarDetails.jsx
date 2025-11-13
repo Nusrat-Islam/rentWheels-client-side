@@ -24,7 +24,8 @@ const CarDetails = () => {
     
   
    const bookingData = {
-
+  name:e.target.name.value,
+  carImage:e.target.image.value,
   carId:carId,
   userEmail:user.email,
   userName: user.displayName,
@@ -269,7 +270,7 @@ rentModalRef.current.close();
        </div>
 
        <div>
-          <span className='absolute text-white secondary-font left-7 -mt-10'>{details.status}</span>
+          <span className='absolute text-white secondary-font left-7 -mt-10'>{status}</span>
        </div> 
        
        </div>

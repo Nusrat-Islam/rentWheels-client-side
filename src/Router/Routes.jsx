@@ -9,6 +9,7 @@ import PrivateRoute from "../Router/PrivateRoute";
 import CarDetails from "../Components/CarDetails";
 import MyListings from "../Pages/MyListings";
 import UpdateCars from "../Components/UpdateCars";
+import MyBookings from "../Pages/MyBookings";
 
 
 
@@ -68,6 +69,12 @@ import UpdateCars from "../Components/UpdateCars";
         </PrivateRoute>
         ),
          
+        },
+        {
+        path:"/my-bookings",
+        element:<PrivateRoute>
+         <MyBookings></MyBookings>
+        </PrivateRoute>
         },
       
     ]

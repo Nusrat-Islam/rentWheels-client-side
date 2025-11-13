@@ -41,9 +41,6 @@ const AddCar = () => {
     console.log(e)
   })     
     }
-
-
-
     return (
         <div>
 
