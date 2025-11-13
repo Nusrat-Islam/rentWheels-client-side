@@ -4,6 +4,8 @@ import Banner from './Banner';
 import { useLoaderData } from 'react-router';
 import RentCard from './RentCard';
 import WhyRentUs from './WhyRentUs';
+import RentalProcess from './RentalProcess';
+import Logo from './Logo';
 
 const Home = () => {
   const data = useLoaderData()
@@ -68,7 +70,8 @@ const Home = () => {
              }
             </div>
             <WhyRentUs></WhyRentUs>
-          
+            <RentalProcess></RentalProcess>
+            <Logo></Logo>
         </div>
     );
 };

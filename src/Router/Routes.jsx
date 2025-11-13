@@ -10,6 +10,8 @@ import CarDetails from "../Components/CarDetails";
 import MyListings from "../Pages/MyListings";
 import UpdateCars from "../Components/UpdateCars";
 import MyBookings from "../Pages/MyBookings";
+import Loading from "../Components/Loading";
+import NotFound from "../Pages/NotFound";
 
 
 
@@ -60,7 +62,8 @@ import MyBookings from "../Pages/MyBookings";
         <UpdateCars></UpdateCars>
         </PrivateRoute>
         ),
-        loader: ({params}) => fetch(`http://localhost:3000/rents/${params.id}`)
+        loader: ({params}) => fetch(`http://localhost:3000/rents/${params.id}`),
+        hydrateFallbackElement:<Loading></Loading>
         },
         {
         path:"/my-listings",
@@ -76,7 +79,13 @@ import MyBookings from "../Pages/MyBookings";
          <MyBookings></MyBookings>
         </PrivateRoute>
         },
-      
-    ]
+     
+    ],
+    
   },
+   {
+        path:"/*",
+        element:<NotFound></NotFound>
+      }
+
 ]);

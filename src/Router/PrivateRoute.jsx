@@ -9,7 +9,7 @@ const PrivateRoute = ({ children }) => {
 
 
   if(loading){
-    return <p>Loading............</p>
+    return <CircleLoader></CircleLoader>
   }
    
   if (!user) {
