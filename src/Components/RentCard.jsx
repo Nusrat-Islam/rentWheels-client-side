@@ -24,7 +24,7 @@ const RentCard = ({ singleData, index }) => {
         scale: 1.03,
         transition: { duration: 0.3 },
       }}
-      className="card shadow-amber-200 shadow-xl bg-tranparent rounded-2xl overflow-hidden mt-8 transition-all duration-500 hover:shadow-2xl"
+      className="card shadow-amber-300 shadow-xl bg-tranparent rounded-2xl overflow-hidden mt-8 transition-all duration-500 hover:shadow-2xl"
     >
       {/* Image */}
       <figure className="px-8 pt-10 h-80 overflow-hidden">

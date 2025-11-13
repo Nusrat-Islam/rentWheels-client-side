@@ -52,7 +52,8 @@ const Navbar = () => {
       
      <NavLink to='/'>Home</NavLink>
      <NavLink to='/add-car'>Add Car</NavLink>
-      <li><a>My Listings</a></li>
+     <NavLink to='/my-listings'>My Listings</NavLink>
+      
       <li><a>My Bookings</a></li>
        <NavLink to='/brows'>Brows Cars</NavLink>
     </ul>

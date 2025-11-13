@@ -8,8 +8,7 @@ import RentCard from '../Components/RentCard';
 
 
     return (
-        <div className='
-      '>
+        <div>
             <div className='flex justify-center items-center '>
                 <div>
                    <img className=' h-45 rotate-y-180' src="/src/assets/headingCar2.png "alt="" />

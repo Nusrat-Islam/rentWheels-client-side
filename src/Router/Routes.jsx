@@ -7,9 +7,16 @@ import BrowsCar from "../Pages/BrowsCar";
 import AddCar from "../Pages/AddCar";
 import PrivateRoute from "../Router/PrivateRoute";
 import CarDetails from "../Components/CarDetails";
+import MyListings from "../Pages/MyListings";
+import UpdateCars from "../Components/UpdateCars";
 
 
- export const router = createBrowserRouter([
+
+
+ export const router = createBrowserRouter(
+
+  [
+ 
   {
     path: "/",
     element:<RootLayout></RootLayout>,
@@ -17,6 +24,7 @@ import CarDetails from "../Components/CarDetails";
         {
             index:true,
             Component: Home,
+            loader: () => fetch('http://localhost:3000/newest-cars')
         },
         {
        path:"/login",
@@ -44,6 +52,22 @@ import CarDetails from "../Components/CarDetails";
         </PrivateRoute>
         ),
         loader: ({params}) => fetch(`http://localhost:3000/rents/${params.id}`)
+        },
+        {
+        path:"/update-cars/:id",
+        element:(<PrivateRoute>
+        <UpdateCars></UpdateCars>
+        </PrivateRoute>
+        ),
+        loader: ({params}) => fetch(`http://localhost:3000/rents/${params.id}`)
+        },
+        {
+        path:"/my-listings",
+        element:(<PrivateRoute>
+          <MyListings></MyListings>
+        </PrivateRoute>
+        ),
+         
         },
       
     ]
