@@ -76,7 +76,7 @@ const RentCard = ({ singleData, index }) => {
         </div>
        <div>
         <div>
-          <img src="/src/assets/badge.png" alt="" className='relative 
+          <img src="/badge.png" alt="" className='relative 
          right-3.5 w-25 h-15 -mt-140'/>
        </div>
 
