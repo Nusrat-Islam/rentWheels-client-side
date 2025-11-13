@@ -9,7 +9,7 @@ const RentalProcess = () => {
                 </div>
                  <h3 className='primary-font -mb-12 font-semibold text-gray-700 text-5xl ml-4 '>Car Rental Process </h3>
             </div>
-<div className=' grid grid-cols-4 gap-3'>
+<div className=' grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-3'>
 
                 <div className="card bg-transparent image-full rounded-4xl px-10 py-10  shadow-xl shadow-amber-300">
   <figure>

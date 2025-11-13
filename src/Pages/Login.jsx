@@ -59,7 +59,7 @@ const Login = () => {
          
   <div className="hero-content flex-col ml-10 ">
     <div className="text-center ">
-      <h1 className="text-5xl primary-font font-bold">Login now!</h1>
+      <h1 className="text-5xl primary-font font-bold text-purple-600">Login now!</h1>
      
     </div>
     <div className="card bg-transparent w-full max-w-sm shrink-0 shadow-2xl">

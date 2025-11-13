@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../Context/AuthContext';
 import { IoLogIn, IoLogOut } from 'react-icons/io5';
-import { toast } from 'react-toast';
-import { FaUser } from 'react-icons/fa';
+import { toast } from 'react-hot-toast';
+
 
 
 
@@ -17,16 +17,16 @@ const Navbar = () => {
       : "text-black hover:text-[#7b3cff]";
 
   const { user, logOut } = useContext(AuthContext)
-
+ console.log(user)
   const signOutUser = () => {
     logOut()
       .then((res) => {
+        toast.success("You logged-out")
         console.log(res.user)
-        toast.success(res.user)
+        
       })
       .catch((e) => {
         console.log(e.message)
-        toast.error(e.message)
       })
   }
 
@@ -58,11 +58,12 @@ const Navbar = () => {
             <NavLink className={activeLink} to="/brows">
               Browse Cars
             </NavLink>
+       
             </ul>
           </div>
           <div className='mt-3'>
             <div>
-              <img src="/public/websiteLogo-.png" alt="" className='relative -mt-10  w-38 h-38' />
+              <img src="/websiteLogo-.png" alt="" className='relative -mt-10  w-38 h-38' />
             </div>
             <div className='absolute -mt-15 '>
               <h4 className='primary-font font-bold  ml-9'>RentWheels</h4>
@@ -88,21 +89,22 @@ const Navbar = () => {
           <NavLink className={activeLink} to="/brows">
             Browse Cars
           </NavLink>
+          {/* <p>{user?.displayName}</p> */}
           </ul>
         </div>
         <div className="navbar-end">
-          {user ? (
+          {user?.email? (
             <div className="dropdown dropdown-end z-50">
               <div
                 tabIndex={0}
                 role="button"
                 className="btn btn-ghost btn-circle avatar"
               >
-                <div className="w-9 border-2 border-gray-300 rounded-full">
+                <div className="w-20  border-2 border-gray-300 rounded-full">
                   <img
                     alt="Tailwind CSS Navbar component"
                     referrerPolicy="no-referrer"
-                    src={user.photoURL || "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"}
+                    src={user?.photoURL || "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"}
                   />
                 </div>
               </div>
@@ -111,8 +113,8 @@ const Navbar = () => {
                 className="menu  menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow"
               >
                 <div className=" pb-3 border-b border-b-gray-200">
-                  <li className="text-sm font-bold">{user.displayName}</li>
-                  <li className="text-xs">{user.email}</li>
+                  <li className="text-sm font-bold">{user?.displayName}</li>
+                  <li className="text-xs">{user?.email}</li>
                 </div>
 
                 <li>

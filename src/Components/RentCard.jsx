@@ -7,7 +7,7 @@ const RentCard = ({ singleData, index }) => {
 
   return (
     <motion.div
-      // ✨ Card animation (fade + slide)
+    
       custom={index}
       initial={{ opacity: 0, y: 40, scale: 0.9 }}
       animate={{
@@ -51,7 +51,7 @@ const RentCard = ({ singleData, index }) => {
           <p className="secondary-font text-xl">Location: {location}</p>
           <div className="flex items-center gap-2">
             <p className="secondary-font text-xl">{rating}</p>
-            <img className="w-8 h-8" src="/src/assets/rating.png" alt="rating" />
+            <img className="w-8 h-8" src="/rating.png" alt="rating" />
           </div>
         </div>
         

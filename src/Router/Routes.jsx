@@ -16,76 +16,80 @@ import NotFound from "../Pages/NotFound";
 
 
 
- export const router = createBrowserRouter(
+export const router = createBrowserRouter(
 
   [
- 
-  {
-    path: "/",
-    element:<RootLayout></RootLayout>,
-    children: [
-        {
-            index:true,
-            Component: Home,
-            loader: () => fetch('http://localhost:3000/newest-cars')
-        },
-        {
-       path:"/login",
-       element: <Login></Login>
-        },
-        {
-       path:"/register",
-       element: <Register></Register>
-        },
-        {
-       path:"/brows",
-       element:<BrowsCar></BrowsCar>,
-       loader:()=> fetch('http://localhost:3000/rents')
-        },
-        {
-        path:"/add-car",
-        element:<PrivateRoute>
-          <AddCar></AddCar>
-        </PrivateRoute>
-        },
-        {
-        path:"/car-details/:id",
-        element:(<PrivateRoute>
-         <CarDetails></CarDetails>
-        </PrivateRoute>
-        ),
-        loader: ({params}) => fetch(`http://localhost:3000/rents/${params.id}`)
-        },
-        {
-        path:"/update-cars/:id",
-        element:(<PrivateRoute>
-        <UpdateCars></UpdateCars>
-        </PrivateRoute>
-        ),
-        loader: ({params}) => fetch(`http://localhost:3000/rents/${params.id}`),
-        hydrateFallbackElement:<Loading></Loading>
-        },
-        {
-        path:"/my-listings",
-        element:(<PrivateRoute>
-          <MyListings></MyListings>
-        </PrivateRoute>
-        ),
-         
-        },
-        {
-        path:"/my-bookings",
-        element:<PrivateRoute>
-         <MyBookings></MyBookings>
-        </PrivateRoute>
-        },
-     
-    ],
-    
-  },
-   {
-        path:"/*",
-        element:<NotFound></NotFound>
-      }
 
-]);
+    {
+      path: "/",
+      element: <RootLayout></RootLayout>,
+      children: [
+        {
+          index: true,
+          Component: Home,
+          loader: () => fetch('https://ren-beige.vercel.app/newest-cars'),
+          hydrateFallbackElement: <Loading></Loading>
+        },
+        {
+          path: "/login",
+          element: <Login></Login>
+        },
+        {
+          path: "/register",
+          element: <Register></Register>
+        },
+        {
+          path: "/brows",
+          element: <BrowsCar></BrowsCar>,
+          loader: () => fetch('https://ren-beige.vercel.app/rents'),
+          hydrateFallbackElement: <Loading></Loading>
+        },
+        {
+          path: "/add-car",
+          element: <PrivateRoute>
+            <AddCar></AddCar>
+          </PrivateRoute>
+        },
+        {
+          path: "/car-details/:id",
+          element: (<PrivateRoute>
+            <CarDetails></CarDetails>
+          </PrivateRoute>
+          ),
+          loader: ({ params }) => fetch(`https://ren-beige.vercel.app/rents/${params.id}`),
+          hydrateFallbackElement: <Loading></Loading>
+        },
+        {
+          path: "/update-cars/:id",
+          element: (<PrivateRoute>
+            <UpdateCars></UpdateCars>
+          </PrivateRoute>
+          ),
+
+          loader: ({ params }) => fetch(`https://ren-beige.vercel.app/rents/${params.id}`),
+          hydrateFallbackElement: <Loading></Loading>
+        },
+        {
+          path: "/my-listings",
+          element: (<PrivateRoute>
+            <MyListings></MyListings>
+          </PrivateRoute>
+          ),
+
+        },
+        {
+          path: "/my-bookings",
+          element: <PrivateRoute>
+            <MyBookings></MyBookings>
+          </PrivateRoute>
+        },
+
+      ],
+
+    },
+    {
+      path: "/*",
+      element: <NotFound></NotFound>
+    }
+
+  ]);

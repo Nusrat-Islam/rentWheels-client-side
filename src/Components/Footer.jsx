@@ -10,7 +10,7 @@ const Footer = () => {
         {/* Logo & Tagline */}
         <div>
           <div>
-            <img src="/public/websiteLogo-.png"alt="" className='relative -mt-10  w-38 h-38' />
+            <img src="/websiteLogo-.png"alt="" className='relative -mt-10  w-38 h-38' />
         </div>
         <div className='absolute -mt-15 '>
             <h4 className='primary-font font-bold  ml-9'>RentWheels</h4>
@@ -37,8 +37,8 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
           <ul className="space-y-2 text-gray-800 text-sm">
             <li>Email: <a href="mailto:support@rentwheels.com" className="hover:text-white">support@rentwheels.com</a></li>
-            <li>Phone: <a href="tel:+880123456789" className="hover:text-white">+880 1234 567 89</a></li>
-            <li>Address: Dhaka, Bangladesh</li>
+            <li>Phone: <a href="tel:+880123456789" className="hover:text-white">+12674562679</a></li>
+            <li>Address: New York,USA</li>
           </ul>
         </div>
 

@@ -17,6 +17,7 @@ const Banner = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
+    arrows: false,
   };
 
   const slides = [
@@ -26,19 +27,40 @@ const Banner = () => {
   ];
 
   return (
-    <div className="w-full bg-gray-400">
+    <div className="w-full">
       <Slider {...settings}>
         {slides.map(slide => (
-          <div key={slide.id} className="relative h-[80vh]">
-            <img src={slide.image} alt="" className="w-full h-full object-cover brightness-75" />
-            <div className="absolute inset-0 flex flex-col justify-center items-start px-10 md:px-20 text-white">
-              <motion.h2 initial={{ y: 50, opacity: 0 }} animate={{ y:0, opacity:1 }} transition={{ duration:1 }} className="text-4xl md:text-5xl font-bold mb-4">
-                <Typewriter words={slide.words} loop={0} cursor cursorStyle="|" typeSpeed={70} deleteSpeed={50} delaySpeed={2000} />
+          <div key={slide.id} className="relative h-[60vh] md:h-[70vh] lg:h-[80vh] w-full">
+            <img 
+              src={slide.image} 
+              alt="" 
+              className="w-full h-full object-cover object-center brightness-75" 
+            />
+            <div className="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 lg:px-24 text-white">
+              <motion.h2 
+                initial={{ y: 50, opacity: 0 }} 
+                animate={{ y:0, opacity:1 }} 
+                transition={{ duration:1 }} 
+                className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
+              >
+                <Typewriter 
+                  words={slide.words} 
+                  loop={0} 
+                  cursor 
+                  cursorStyle="|" 
+                  typeSpeed={70} 
+                  deleteSpeed={50} 
+                  delaySpeed={2000} 
+                />
               </motion.h2>
-              <motion.p initial={{ y:20, opacity:0 }} animate={{ y:0, opacity:1 }} transition={{ delay:1, duration:1 }} className="text-xl mb-6">
+              <motion.p 
+                initial={{ y:20, opacity:0 }} 
+                animate={{ y:0, opacity:1 }} 
+                transition={{ delay:1, duration:1 }} 
+                className="text-lg md:text-xl mb-6"
+              >
                 {slide.description}
               </motion.p>
-             
             </div>
           </div>
         ))}
@@ -48,5 +70,6 @@ const Banner = () => {
 };
 
 export default Banner;
+
 
 

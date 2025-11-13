@@ -28,7 +28,7 @@ const Logo = () => {
         </h3>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-x-10 gap-y-20 mt-15 pb-15">
+      <div className="grid grid-cols-1  lg:grid-cols-4 md:grid-cols-3 gap-x-10 gap-y-20 mt-15 pb-15">
         {brands.map((brand, index) => (
           <motion.img
             key={index}

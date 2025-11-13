@@ -12,8 +12,8 @@ const AuthProvider = ({children}) => {
 
 
 const [user, setUser] = useState(null);
-const [loading, setLoading] = useState(true)
-
+const [loading, setLoading] = useState(true);
+console.log(user)
     //Create User
  const createUser = (email,password) => {
     setLoading(false)
@@ -38,7 +38,7 @@ const googleLogin = () => {
     return () => {
         unSubscribe();
     }
- },[]);
+ },[user]);
 
  //SignOut
  const logOut = () => {
@@ -54,7 +54,7 @@ logIn,
 googleLogin,
 user,
 loading,
-    
+ setUser   
 
 }
 

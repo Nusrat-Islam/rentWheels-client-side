@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Navigate, useLocation } from "react-router";
 import { AuthContext } from "../Context/AuthContext";
+import { CircleLoader } from "react-spinners";
 
 
 const PrivateRoute = ({ children }) => {

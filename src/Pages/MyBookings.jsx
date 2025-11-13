@@ -7,23 +7,23 @@ import { Link } from 'react-router';
 
 const MyBookings = () => {
 
-    const {user} = use(AuthContext)
+    const { user } = use(AuthContext)
     const [rents, setRents] = useState([])
     const [loading, setLoading] = useState(true)
     console.log(rents)
 
-    useEffect(()=> {
-     fetch(`http://localhost:3000/my-bookings?email=${user.email}`)
-     .then(res => res.json())
-     .then(data => {
-        setRents(data.result)
-      setLoading(false)
-     })
-    },[])
-    if(loading){
+    useEffect(() => {
+        fetch(`https://ren-beige.vercel.app/my-bookings?email=${user.email}`)
+            .then(res => res.json())
+            .then(data => {
+                setRents(data.result)
+                setLoading(false)
+            })
+    }, [])
+    if (loading) {
         return <p>Loading.........</p>
     }
-  
+
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-7">
             {rents.map((booking) => (

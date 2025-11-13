@@ -16,7 +16,7 @@ import RentCard from '../Components/RentCard';
                  <h3 className='primary-font -mb-12 font-bold text-2xl ml-4 '>All Available Cars</h3>
             </div>
             
-            <div className='grid grid-cols-3 gap-8 pb-20'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-20'>
              {
                 data.map(singleData => (
                  <RentCard key={singleData._id} singleData={singleData}></RentCard>   

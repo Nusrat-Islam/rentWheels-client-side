@@ -9,12 +9,12 @@ import CustomCursor from "../Components/CustomCursor"; // cursor import
 const RootLayout = () => {
   return (
     <div className="relative">
-      {/* Custom Cursor সব page এ */}
+    
       <CustomCursor/>
 
     
       <div className="min-h-screen bg-gradient-to-r from-yellow-100 via-purple-200 to-orange-100">
-        {/* Page content wrapper */}
+       
         <div className="mx-auto w-11/12">
           {/* Navbar */}
           <Navbar />

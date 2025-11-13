@@ -12,8 +12,16 @@ import { Typewriter } from 'react-simple-typewriter';
 const WhyRentUs = () => {
   
   return (
+
     <section className="py-16 bg-gray-100">
-      <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center md:space-x-12">
+           <div className='flex justify-center items-center -mt-50'>
+                <div>
+                   <img className=' h-45 rotate-y-180' src="/src/assets/headingCar2.png "alt="" />
+                </div>
+                 <h3 className='primary-font -mb-12 font-bold lg:text-5xl md:text-5xl text-2xl text-gray-700 ml-4 '>Why Rent Us?</h3>
+            </div>
+      <div className="max-w-xl lg:flex-row md:max-w-full mx-auto px-4 flex flex-col md:flex-row items-center md:space-x-12">
+      
         {/* Picture */}
         <motion.div
           initial={{ opacity: 0, x: -100 }}
@@ -37,13 +45,8 @@ const WhyRentUs = () => {
           transition={{ duration: 0.8 }}
           className="md:w-1/2"
         >
-               <div className='flex justify-center items-center -mt-50'>
-                <div>
-                   <img className=' h-45 rotate-y-180' src="/src/assets/headingCar2.png "alt="" />
-                </div>
-                 <h3 className='primary-font -mb-12 font-bold text-2xl ml-4 '>Why Rent Us?</h3>
-            </div>
-          <div>
+            
+          <div className='mt-6'>
              <p>Every vehicle in our fleet is carefully maintained and regularly inspected to guarantee safety, comfort, and performance. From economy to luxury — we’ve got the perfect ride for every occasion.
                 Our dedicated support team is available 24/7 to assist you with bookings, questions, or roadside emergencies. We value your trust and work tirelessly to make your journey smooth and worry-free.
              </p>
