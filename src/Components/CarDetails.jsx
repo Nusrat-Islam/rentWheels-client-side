@@ -1,13 +1,17 @@
-import React, { use, useRef } from 'react';
+import React, { use, useRef, useState } from 'react';
 import { MdOutlineDoubleArrow } from 'react-icons/md';
 import { useLoaderData } from 'react-router';
 import { AuthContext } from '../Context/AuthContext';
+import toast from 'react-hot-toast';
+
 
 const CarDetails = () => {
-  const data = useLoaderData()
+  const data = useLoaderData();
   const details = data.result;
-const rentModalRef = useRef(null)
-const {user} = use(AuthContext)
+  const carId = details._id;
+  const rentModalRef = useRef(null);
+  const { user } = React.useContext(AuthContext);
+  const [status, setStatus] = useState(details.status);
 
 
   const handleModal = () => {
@@ -16,32 +20,46 @@ const {user} = use(AuthContext)
 
   const handleModalSubmit = (e) => {
    e.preventDefault()
+
+    
   
    const bookingData = {
 
-      name : e.target.name.value,
-    category: e.target.category.value,
-    description: e.target.description.value,
-   location: e.target.location.value,
- price:e.target.price.value,
-   status: e.target.status.value,
-   image: e.target.image.value,
-    providerName: user.displayName,
-    providerEmail:user.email,
+  carId:carId,
+  userEmail:user.email,
+  userName: user.displayName,
+  rentPerDay:e.target.price.value,
+  bookingDate:new Date(),
+  status: "confirmed"
    }
-   fetch('http://localhost:3000/rents',{
-    method:"POST",
-    headers: {
-        "Content-Type": "application/json",
-    },
-    body:JSON.stringify(bookingData)
+
+rentModalRef.current.close();
+
+  fetch("http://localhost:3000/bookings", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(bookingData)
   })
-   .then(res => res.json())
-   .then(data => {
-    console.log("After Booking",data)
-   })
- 
-  }
+
+  .then(res => res.json())
+  .then(data => {
+     if ( data.success) {
+  
+      toast.dismiss();
+      toast.success("Booking confirmed!");
+          setStatus("unavailable");
+      
+    } else {
+      // Revert status if failed
+      setStatus(details.status);
+      
+      toast.error(data.message || "Booking failed!");
+    }
+  });
+  
+
+
+};
 
   return (
     <div className='flex justify-center items-center mt-16'>
