@@ -5,7 +5,17 @@ import { IoLogIn, IoLogOut } from 'react-icons/io5';
 import { toast } from 'react-toast';
 import { FaUser } from 'react-icons/fa';
 
+
+
+
+
 const Navbar = () => {
+    // active className function
+  const activeLink = ({ isActive }) =>
+    isActive
+      ? "text-[#7b3cff] border-b-2 border-black"
+      : "text-black hover:text-[#7b3cff]";
+
   const { user, logOut } = useContext(AuthContext)
 
   const signOutUser = () => {
@@ -19,6 +29,9 @@ const Navbar = () => {
         toast.error(e.message)
       })
   }
+
+  //Active Link Function
+   
   return (
     <div >
       <div className="navbar shadow-amber-200 shadow-xl">
@@ -30,11 +43,21 @@ const Navbar = () => {
             <ul
               tabIndex="-1"
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-            <NavLink to='/'>Home</NavLink>
-            <NavLink to='/add-car'>Add Car</NavLink>
-            <NavLink to='/my-listings'>My Listings</NavLink>
-            <NavLink to='/my-bookings'>My MBookings</NavLink>
-            <NavLink to='/brows'>Brows Cars</NavLink>
+              <NavLink className={activeLink} to="/">
+              Home
+            </NavLink>
+            <NavLink className={activeLink} to="/add-car">
+              Add Car
+            </NavLink>
+            <NavLink className={activeLink} to="/my-listings">
+              My Listings
+            </NavLink>
+            <NavLink className={activeLink} to="/my-bookings">
+              My Bookings
+            </NavLink>
+            <NavLink className={activeLink} to="/brows">
+              Browse Cars
+            </NavLink>
             </ul>
           </div>
           <div className='mt-3'>
@@ -50,11 +73,21 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex ">
           <ul className="menu menu-horizontal -mt-5 font-semiold primary-font text-xl gap-x-4">
 
-            <NavLink to='/'>Home</NavLink>
-            <NavLink to='/add-car'>Add Car</NavLink>
-            <NavLink to='/my-listings'>My Listings</NavLink>
-            <NavLink to='/my-bookings'>My MBookings</NavLink>
-            <NavLink to='/brows'>Brows Cars</NavLink>
+               <NavLink className={activeLink} to="/">
+            Home
+          </NavLink>
+          <NavLink className={activeLink} to="/add-car">
+            Add Car
+          </NavLink>
+          <NavLink className={activeLink} to="/my-listings">
+            My Listings
+          </NavLink>
+          <NavLink className={activeLink} to="/my-bookings">
+            My Bookings
+          </NavLink>
+          <NavLink className={activeLink} to="/brows">
+            Browse Cars
+          </NavLink>
           </ul>
         </div>
         <div className="navbar-end">
