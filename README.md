@@ -81,14 +81,7 @@ cd RentWheels-Client
 npm install
 ```
 
-2. Set up environment variables by creating a `.env` file in the root directory:
-
-```env
-DATABASE_URL=your_database_url
-JWT_SECRET=your_jwt_secret
-```
-
-3. Run the application:
+2. Run the application:
 
 ```bash
 npm run dev
@@ -112,5 +105,5 @@ your-project/
 
 ## Contact
 
-**Live URL:** [Live Site](https://yourdomain.com/)
+**Live URL:** [Live Site](https://car-rental-platform-fdfa3.web.app)
 **Email:** [Nusrat-Islam](nishinusrat395@gamil.com)
