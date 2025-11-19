@@ -11,9 +11,9 @@ import RentCard from '../Components/RentCard';
         <div>
             <div className='flex justify-center items-center '>
                 <div>
-                   <img className=' h-45 rotate-y-180' src="/src/assets/headingCar2.png "alt="" />
+                   <img className=' h-45 rotate-y-180' src="/headingCar2.png "alt="" />
                 </div>
-                 <h3 className='primary-font -mb-12 font-bold text-2xl ml-4 '>All Available Cars</h3>
+                 <h3 className='primary-font -mb-12 font-bold text-4xl ml-4 '>All Available Cars</h3>
             </div>
             
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-20'>

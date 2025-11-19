@@ -1,16 +1,116 @@
-# React + Vite
+# Project Name  
+A modern React frontend for RentWheels car rental platform where users can browse and book cars.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [About the Project](#about-the-project)
+- [Project Overview](#project-overview)
+- [Key Features](#key-features)
+- [Tech Stack](#tech-stack)
+- [Dependencies](#dependencies)
+- [Installation️ & Setup](#installation--setup)
+- [Folder Structure](#folder-structure)
+- [Contributions](#contributions)
+- [How to Contribute](#how-to-contribute)
+- [License](#license)
+- [Contact](#contact)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## About the Project 
+The client-side of RentWheels provides a user-friendly interface for browsing cars, viewing details, and booking rentals. Built with React.js, it demonstrates modern frontend practices with responsive design and animations.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project Overview  
+Objective: Provide a seamless UI/UX for car rental.
+
+Users: Customers can browse cars, see availability, and make bookings.
+
+---
+
+## Key Features  
+- Browse available cars with filters.
+- View detailed car info (description, price, category, location).
+- Booking interface with user information.
+- Responsive design and smooth animations using Framer Motion.
+
+---
+
+## Tech Stack  
+Frontend: React.js · Tailwind CSS · Framer Motion
+Tools: Git · VS Code
+
+---
+
+## Dependencies  )
+List required dependencies or major libraries:
+
+```json
+{
+  "@tailwindcss/vite": "^4.1.17",
+    "firebase": "^12.5.0",
+    "font-awesome": "^4.7.0",
+    "framer-motion": "^12.23.24",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-hot-toast": "^2.6.0",
+    "react-icons": "^5.5.0",
+    "react-router": "^7.9.5",
+    "react-simple-typewriter": "^5.0.1",
+    "react-slick": "^0.31.0",
+    "react-spinners": "^0.17.0",
+    "react-toast": "^1.0.3",
+    "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.26.3",
+    "tailwindcss": "^4.1.17",
+    "typewriter-effect": "^2.22.0"
+}
+```
+
+---
+
+## Installation️ & Setup
+1. Clone the repo and install dependencies:
+
+```bash
+git clone https://github.com/Nusrat-Islam/RentWheels-Client
+cd RentWheels-Client
+npm install
+```
+
+2. Set up environment variables by creating a `.env` file in the root directory:
+
+```env
+DATABASE_URL=your_database_url
+JWT_SECRET=your_jwt_secret
+```
+
+3. Run the application:
+
+```bash
+npm run dev
+```
+
+---
+
+## Folder Structure
+
+```plaintext
+your-project/
+│
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── utils/
+│   └── hooks/
+├── public/
+└── package.json
+```
+
+## Contact
+
+**Live URL:** [Live Site](https://yourdomain.com/)
+**Email:** [Nusrat-Islam](nishinusrat395@gamil.com)

@@ -5,7 +5,7 @@ const RentalProcess = () => {
         <div>
              <div className='flex justify-center items-center '>
                 <div>
-                   <img className=' h-45 rotate-y-180' src="/src/assets/headingCar2.png "alt="" />
+                   <img className=' h-45 rotate-y-180' src="/headingCar2.png "alt="" />
                 </div>
                  <h3 className='primary-font -mb-12 font-semibold text-gray-700 text-5xl ml-4 '>Car Rental Process </h3>
             </div>

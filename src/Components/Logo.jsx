@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 
 const Logo = () => {
   const brands = [
-    "/src/assets/brand1.png",
-    "/src/assets/brand2.png",
-    "/src/assets/brand3.png",
-    "/src/assets/brand4.png",
-    "/src/assets/brand5.png",
-    "/src/assets/brand6.png",
-    "/src/assets/brand7.png",
-    "/src/assets/brand8.png",
+    "/brand1.png",
+    "/brand2.png",
+    "/brand3.png",
+    "/brand4.png",
+    "/brand5.png",
+    "/brand6.png",
+    "/brand7.png",
+    "/brand8.png",
   ];
 
   return (
@@ -19,7 +19,7 @@ const Logo = () => {
         <div>
           <img
             className="h-45 rotate-y-180"
-            src="/src/assets/headingCar2.png"
+            src="/headingCar2.png"
             alt=""
           />
         </div>

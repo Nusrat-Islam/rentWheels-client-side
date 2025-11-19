@@ -37,9 +37,9 @@ const Home = () => {
 
       <div className='flex justify-center items-center '>
         <div>
-          <img className=' h-45 rotate-y-180' src="/src/assets/headingCar2.png " alt="" />
+          <img className=' h-45 rotate-y-180' src="/headingCar2.png " alt="" />
         </div>
-        <h3 className='primary-font -mb-12 font-bold text-2xl ml-4 '>6 Newest Cars</h3>
+        <h3 className='primary-font -mb-12 font-bold text-4xl ml-4 '>6 Newest Cars</h3>
       </div>
 
 

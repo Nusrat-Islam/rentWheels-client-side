@@ -16,7 +16,7 @@ const WhyRentUs = () => {
     <section className="py-16 bg-gray-100">
            <div className='flex justify-center items-center -mt-50'>
                 <div>
-                   <img className=' h-45 rotate-y-180' src="/src/assets/headingCar2.png "alt="" />
+                   <img className=' h-45 rotate-y-180' src="/headingCar2.png "alt="" />
                 </div>
                  <h3 className='primary-font -mb-12 font-bold lg:text-5xl md:text-5xl text-2xl text-gray-700 ml-4 '>Why Rent Us?</h3>
             </div>
