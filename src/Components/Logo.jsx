@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Logo = () => {
   const brands = [
-    "/brand1.png",
+    "/brand9.png",
     "/brand2.png",
     "/brand3.png",
     "/brand4.png",
