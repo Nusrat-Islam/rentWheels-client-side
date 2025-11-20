@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Logo = () => {
   const brands = [
-    "/brand9.png",
+    "https://www.pngall.com/wp-content/uploads/13/Nissan-Logo-PNG-Clipart.png",
     "/brand2.png",
     "/brand3.png",
     "/brand4.png",
