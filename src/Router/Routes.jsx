@@ -12,6 +12,10 @@ import UpdateCars from "../Components/UpdateCars";
 import MyBookings from "../Pages/MyBookings";
 import Loading from "../Components/Loading";
 import NotFound from "../Pages/NotFound";
+import DashboardLayout from "../Layout/DashboardLayout";
+import DashboardHome from "../Components/DashboardHome";
+import Profile from "../Pages/Profile";
+import AboutUs from "../Pages/AboutUs";
 
 
 
@@ -51,11 +55,16 @@ export const router = createBrowserRouter(
           </PrivateRoute>
         },
         {
+          path: "/about",
+          element:
+            <AboutUs></AboutUs>
+        
+        },
+        {
           path: "/car-details/:id",
-          element: (<PrivateRoute>
-            <CarDetails></CarDetails>
-          </PrivateRoute>
-          ),
+          element:
+            <CarDetails></CarDetails>,
+          
           loader: ({ params }) => fetch(`https://ren-beige.vercel.app/rents/${params.id}`),
           hydrateFallbackElement: <Loading></Loading>
         },
@@ -85,8 +94,21 @@ export const router = createBrowserRouter(
         },
 
       ],
-
+     //dashboard
+     
     },
+    //
+    {
+    path: "dashboard",
+    element: <PrivateRoute><DashboardLayout /></PrivateRoute>,
+    children: [
+       { index: true, element: <DashboardHome /> },
+        { path: "add-car", element: <AddCar /> }, // এখন এটি ড্যাশবোর্ডের ভেতরে
+        { path: "my-listings", element: <MyListings /> }, // এটিও ড্যাশবোর্ডের ভেতরে
+        { path: "my-bookings", element: <MyBookings /> }, // এটিও ড্যাশবোর্ডের ভেতরে
+         { path: "profile", element: <Profile/> },
+    ]
+  },
     {
       path: "/*",
       element: <NotFound></NotFound>

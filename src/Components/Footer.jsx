@@ -10,10 +10,10 @@ const Footer = () => {
         {/* Logo & Tagline */}
         <div>
           <div>
-            <img src="/websiteLogo-.png"alt="" className='relative -mt-10  w-38 h-38' />
+            <img src="/websiteLogo-.png"alt="" className='relative -mt-12 w-32 h-32' />
         </div>
-        <div className='absolute -mt-15 '>
-            <h4 className='primary-font font-bold  ml-9'>RentWheels</h4>
+        <div className='absolute -mt-12 '>
+            <h4 className='primary-font font-bold  text-center'>RentWheels</h4>
             <p className='text-xs ml-2 bg-gradient-to-r  from-[#FF8C00] via-[#9c2fea]  to-[#e5d308] text-transparent bg-clip-text'>C a r  R e n t a l  P l a t f o r m</p>
         </div>
           <p className="text-sm text-gray-800">

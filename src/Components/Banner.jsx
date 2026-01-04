@@ -27,10 +27,10 @@ const Banner = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full ">
       <Slider {...settings}>
         {slides.map(slide => (
-          <div key={slide.id} className="relative h-[60vh] md:h-[70vh] lg:h-[80vh] w-full">
+          <div key={slide.id} className=" relative h-[60vh] md:h-[50vh] lg:h-[70vh] w-full">
             <img 
               src={slide.image} 
               alt="" 

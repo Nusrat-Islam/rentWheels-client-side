@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MdOutlineDoubleArrow } from 'react-icons/md';
+import { MdLocationOn, MdEmail, MdOutlineDoubleArrow, MdDriveFileRenameOutline } from 'react-icons/md';
 import { Link } from 'react-router';
 
 const RentCard = ({ singleData, index }) => {
@@ -24,7 +24,7 @@ const RentCard = ({ singleData, index }) => {
         scale: 1.03,
         transition: { duration: 0.3 },
       }}
-      className="card shadow-amber-300 shadow-xl bg-tranparent rounded-2xl overflow-hidden mt-8 transition-all duration-500 hover:shadow-2xl"
+      className=" shadow-amber-300 shadow-xl bg-tranparent rounded-2xl overflow-hidden mt-8 transition-all duration-500 hover:shadow-2xl"
     >
       {/* Image */}
       <figure className="px-8 pt-10 h-80 overflow-hidden">
@@ -38,8 +38,8 @@ const RentCard = ({ singleData, index }) => {
       {/* Card body */}
       <div className="card-body  ">
         <div className="flex justify-between items-center">
-         <div> <h2 className="primary-font font-bold pt-4 text-2xl">{name}</h2></div>
-        <div>  <p className="secondary-font font-bold text-xl bg-gradient-to-r from-[#FF8C00] via-[#9c2fea] to-[#e5d308] text-transparent bg-clip-text">
+         <div> <h2 className="primary-font font-bold text-xl">{name}</h2></div>
+        <div>  <p className="secondary-font font-bold text-xm bg-gradient-to-r from-[#FF8C00] via-[#9c2fea] to-[#e5d308] text-transparent bg-clip-text">
             {category}
           </p></div>
         </div>
@@ -48,19 +48,19 @@ const RentCard = ({ singleData, index }) => {
         </div>
 
         <div className="flex justify-between items-center">
-          <p className="secondary-font text-xl">Location: {location}</p>
+          <p className="secondary-font text-xm flex"><MdLocationOn size={24}/>{location}</p>
           <div className="flex items-center gap-2">
-            <p className="secondary-font text-xl">{rating}</p>
+            <p className="secondary-font text-xm">{rating}</p>
             <img className="w-8 h-8" src="/rating.png" alt="rating" />
           </div>
         </div>
         
         <div className='flex justify-between items-center'>
           <div>
-       <h4 className='secondary-font'>Email: {providerEmail}</h4>
+       <h4 className='secondary-font flex'><MdEmail size={24}/> {providerEmail}</h4>
           </div>
           <div>
-       <h4 className='secondary-font'>Name: {providerName}</h4>
+       <h4 className='secondary-font flex'><MdDriveFileRenameOutline size={24} /> {providerName}</h4>
           </div>
         </div>
 

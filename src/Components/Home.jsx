@@ -65,7 +65,7 @@ const Home = () => {
         </div>
       </form>
 
-      <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8 pb-20'>
+      <div className=' grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 gap-8 pb-20'>
         {
           cars.map(singleData => (
             <RentCard key={singleData._id} singleData={singleData}></RentCard>

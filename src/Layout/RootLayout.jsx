@@ -14,14 +14,15 @@ const RootLayout = () => {
 
     
       <div className="min-h-screen bg-gradient-to-r from-yellow-100 via-purple-200 to-orange-100">
-       
-        <div className="mx-auto w-11/12">
-          {/* Navbar */}
-          <Navbar />
+             {/* Navbar */}
+           <Navbar />
+        {/* <div className="mx-auto w-11/12"> */}
+        
+      
 
           {/* Page content rendered by router */}
           <Outlet />
-        </div>
+       
       </div>
 
       {/* Footer */}
